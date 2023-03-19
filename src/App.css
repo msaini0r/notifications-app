@@ -1,17 +1,21 @@
-.notification-list-container {
-  margin-top: 30px;
+body {
+  background-color: #ddd0c8;
 }
 
 .title{
   margin-top: 30px !important;
+  text-align: center;
+}
+
+.notification-list-container {
+  margin-top: 30px;
 }
 
 .notification-item {
   background-color: #ffffff;
   border: 1px solid #d6d6d6;
   border-radius: 5px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03),
-    0 4px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: #ddd0c8;
   position: relative;
   transition: all .3s ease-in-out;
   margin-bottom: 20px;
@@ -20,57 +24,26 @@
 .notification-item:hover {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.04),
     0 8px 8px rgba(0, 0, 0, 0.06);
-  transform: translateY(-2px);
+  transform: translateY(-4px);
 }
 
-.notification-item .notification-icon {
-  background-color: #007bff;
-  color: #fff;
-  font-size: 24px;
-  display: inline-block;
-  padding: 10px;
-  border-radius: 0 0 0 5px;
-  text-align: center;
-}
+@media screen and (min-width: 320px) and (max-width: 768px){
 
-.notification-item .notification-content {
-  padding: 10px 15px;
-}
+  .title{
+    text-align: center;
+  }
 
-.notification-item .notification-content h3 {
-  margin: 0 0 5px;
-  font-size: 18px;
-  font-weight: 600;
-  color: #333;
-}
+  .notification-item{
+    padding: 10px;
+  }
+  
+  .MuiListItem-root{
+    width: 90%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 
-.notification-item .notification-date {
-  color: #aaa;
-  font-size: 12px;
-  margin-bottom: 5px;
-}
-
-.notification-item .notification-actions {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 0;
-  display: flex;
-  align-items: center;
-}
-
-.notification-item .notification-actions button {
-  background-color: transparent;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  font-size: 16px;
-  margin-left: 10px;
-  transition: all .3s ease;
-}
-
-.notification-list-container .no-notifications-text {
-  font-style: italic;
-  text-align: center;
-  color: #aaa;
+  .MuiTypography-displayBlock{
+    padding-top: 8px;
+  }
 }
